@@ -30,7 +30,6 @@ public class ReservationServiceImpl implements ReservationService {
 		//Make Payment
 		
 		Long flightId = request.getFlightId();
-		System.out.println(flightId);
 		Flight flight = flightRepository.findFlightById(flightId);
 		
 		
@@ -39,7 +38,6 @@ public class ReservationServiceImpl implements ReservationService {
 		passenger.setLastName(request.getPassengerLastName());
 		passenger.setPhone(request.getPassengerPhone());
 		passenger.setEmail(request.getPassengerEmail());
-		
 		Passenger savedPassenger = passengerRepository.save(passenger);
 		
 		Reservation reservation = new Reservation();

@@ -6,4 +6,5 @@ import com.sgic.flightreservation.entities.Reservation;
 
 public interface ReservationRepository extends JpaRepository<Reservation, Long> {
 
+	Reservation findReservationById(Long id);
 }
